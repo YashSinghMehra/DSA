@@ -1,5 +1,5 @@
 #include<stdio.h>
-int fabo(int a,int b,int n){
+void fabo(int a,int b,int n){
     printf("%d\t",a);
     if(n>1){
         fabo(b,a+b,n-1);
