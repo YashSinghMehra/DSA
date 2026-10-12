@@ -1,8 +1,5 @@
 # include<stdio.h>
-int main(){
-    int n;
-    printf("Enter the no. of rows::");
-    scanf("%d",&n);
+void pattern(int n){
     for(int i=0;i<n;i++){
         for(int j=0;j<(2*n)-1;j++){
             if(i+j>=n-1 && j<=n-1){
@@ -17,4 +14,21 @@ int main(){
         }
         printf("\n");
     }
+}
+int main(){
+    while(1){
+        int n;
+        printf("Enter the no. of rows::");
+        if(scanf("%d\n",&n)!=1){
+            printf("Invalid input\nEnter Numeric value only;\n");
+            return 1;
+        }
+        else if(n>0){
+            pattern(n);
+            break;
+        }
+        else{
+            printf("invalid input\nEnter no. of rows>0;\n");
+        }
+    }  
 }
